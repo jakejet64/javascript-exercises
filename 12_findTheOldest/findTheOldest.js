@@ -2,8 +2,6 @@ const findTheOldest = function(input) {
     const currentYear = new Date().getFullYear();
     let oldestSoFar = input[0];
     input.forEach(person => {
-        console.log('hello');
-
         if(isNaN(person.yearOfDeath)){
             person.yearOfDeath = currentYear;
         }
@@ -13,7 +11,6 @@ const findTheOldest = function(input) {
             oldestSoFar = person;
         }
     });
-    console.log(oldestSoFar.name);
     return oldestSoFar;
 };
 
